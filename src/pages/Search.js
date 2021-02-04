@@ -13,6 +13,7 @@ class Search extends Component {
   };
 
   handleInputChange = event => {
+    console.log("handle input change ")
     const name = event.target.name;
     const value = event.target.value;
     this.setState({
@@ -35,17 +36,14 @@ class Search extends Component {
       .catch(err => this.setState({ error: err.message }));
   };
   render() {
+    console.log("handle the render function ")
     return (
       <div>
         <Container style={{ minHeight: "60%" }}>
           <h1 className="text-center">Search For User !!</h1>
-          <Alert
-            type="danger"
-            style={{ opacity: this.state.error ? 1 : 0, marginBottom: 40 }}
-          >
-            {this.state.error}
+          <Alert>
+          <p></p>
           </Alert>
-         
           <SearchForm
             handleFormSubmit={this.handleFormSubmit}
             handleInputChange={this.handleInputChange}
