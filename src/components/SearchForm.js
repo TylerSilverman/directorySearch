@@ -15,10 +15,12 @@ function SearchForm(props) {
           id="search"
         />
         <br />
-        <button onClick={props.handleFormSubmit} className="btn btn-warning">
-          Search
+        <button onClick={props.handleFormSubmit} console={props.value} className="btn btn-warning">
+          User Search
         </button>
+        <br></br>
       </div>
+      <br></br>
     </form>
   );
 }
