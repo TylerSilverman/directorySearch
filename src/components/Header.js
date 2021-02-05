@@ -12,6 +12,7 @@ const styles = {
 
 
 function Header() {
+  console.log("header component")
   return (
     <header style={styles.headerStyle} className="header">
       <h1 style={styles.headingStyle}>User Directory</h1>

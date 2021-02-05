@@ -1,18 +1,24 @@
 import React from "react";
 import API from "../utils/API";
 
-class UserDetal extends React.Component {
+class UserDetail extends React.Component {
     constructor (props){
         super(props);
         this.state ={
             users: null,
+            first: "",
+            last: "",
+            gender: "",
+            email:"",
+            phone:""
         }
     }
 
-    ///check to see if there is a user
+    
     componentDidMount (){
         API.getUsers().then(data => {
-            console.log(data)
+            console.log(data + "componentDidMount function")
+            console.log(data.data.results)
             this.setState({
                 users: data.data.results
             })
@@ -21,11 +27,13 @@ class UserDetal extends React.Component {
 
     render() {
         const users = this.state.users;
+
         return (
-            <div>
+            <div className="text-center">
                 {users && (users.map(user => {
                     return (
-                        <h1>{user.gender} </h1>
+                        <h5>First Name:{user.name.first} </h5>
+                        // <h5>Last Name:{user.name.last} </h5>
                     )
                     
                 }))}
@@ -34,4 +42,9 @@ class UserDetal extends React.Component {
     }
 
 }
-export default UserDetal;
+export default UserDetail;
+// First Name: {user.name.first}
+// Last Name: {user.name.last}
+// Gender: {user.gender}
+// Email Address: {user.email}
+// Phone Number: {user.phone}

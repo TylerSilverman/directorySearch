@@ -20,7 +20,6 @@ function Section() {
   return (
     <header style={styles.headerStyle} className="Section">
       <br></br><br></br>
-      <h2>User Search:</h2>
       <Container/> 
       <SearchForm/>
     </header>

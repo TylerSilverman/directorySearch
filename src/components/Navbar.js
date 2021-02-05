@@ -11,8 +11,8 @@ const styles = {
 function Navbar() {
   return (
     <nav style={styles.navbarStyle} className="navbar">
-      <a href="/">TylerSilvermanDirectory</a>
-      <a href="/">Home</a>
+      <a href="/">TylerSilverman</a>
+      {/* <a href="/">Home</a> */}
     </nav>
   );
 }
