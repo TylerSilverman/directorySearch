@@ -3,7 +3,8 @@ import "../styles/Header.css";
 // import React, { Component } from "react";
 import Container from "./Container";
 import SearchForm from "./SearchForm";
-// import API from "../utils/API";
+import API from "../utils/API";
+
 
 const styles = {
   headerStyle: {
@@ -22,7 +23,6 @@ function Section() {
       <h2>User Search:</h2>
       <Container/> 
       <SearchForm/>
-      {/* <API/> */}
     </header>
   );
 }
