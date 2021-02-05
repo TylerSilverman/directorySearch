@@ -1,28 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import About from "./pages/About";
-import Search from "./pages/Search";
+import Header from "./components/Header";
+import Section from "./components/Section";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Wrapper from "./components/Wrapper";
-
+// import API from "./utils/API";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Navbar />
-        <Wrapper>
-          <Route exact path="/" component={About} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/search" component={Search} />
-        </Wrapper>
-        
-        <Footer />
-      </div>
-    </Router>
+    <div>
+      <Navbar />
+      <Header />
+      <Section />
+    </div>
+    
   );
 }
-
 
 export default App;
