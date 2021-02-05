@@ -5,7 +5,7 @@ class UserDetal extends React.Component {
     constructor (props){
         super(props);
         this.state ={
-            users: null
+            users: null,
         }
     }
 
@@ -25,10 +25,11 @@ class UserDetal extends React.Component {
             <div>
                 {users && (users.map(user => {
                     return (
-                        <h1>{user.gender}</h1>
+                        <h1>{user.gender} </h1>
                     )
+                    
                 }))}
-            </div>
+            </div> 
         )
     }
 

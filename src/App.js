@@ -2,7 +2,6 @@ import React from "react";
 import Header from "./components/Header";
 import Section from "./components/Section";
 import Navbar from "./components/Navbar";
-// import API from "./utils/API";
 import UserDetail from "./components/UserDetail"
 
 function App() {
@@ -15,8 +14,6 @@ function App() {
       <Header />
       <Section />
       <UserDetail/>
-
-
     </div>
     
   );
