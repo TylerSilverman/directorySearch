@@ -5,10 +5,9 @@ import Navbar from "./components/Navbar";
 import UserDetail from "./components/UserDetail" //displaying user gender
 import Container from "./components/Container"; //displaying the information 
 import Card from "./components/Card";
+import SearchForm from "./components/SearchForm";
 
 function App() {
-
-  const user =[]
 
   return (
     <div>
@@ -16,6 +15,7 @@ function App() {
       <Header />
       <Section />
       <Container size="md-12">
+      <SearchForm />
       <Card>
         
       <UserDetail/>

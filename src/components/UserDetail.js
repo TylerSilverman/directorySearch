@@ -10,7 +10,8 @@ class UserDetail extends React.Component {
             last: "",
             gender: "",
             email:"",
-            phone:""
+            phone:"",
+            dob: ""
         }
     }
 
@@ -29,12 +30,44 @@ class UserDetail extends React.Component {
         const users = this.state.users;
 
         return (
-            <div className="text-center">
+            <div className="text">
                 {users && (users.map(user => {
-                    return (
-                        <h5>First Name:{user.name.first} </h5>
-                        // <h5>Last Name:{user.name.last} </h5>
-                    )
+
+                   return (
+                    <table class="table">
+                    <thead class="thread-dark">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First Name:</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Email Address</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Years Old</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <th scope="col">{user.name.first}</th>
+                        <td>{user.name.last}</td>
+                        <td>{user.gender}</td>
+                        <td>{user.email}</td>
+                        <td>{user.phone}</td>
+                        <td>{user.dob.age}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <th scope="col">{user.name.first}</th>
+                        <td>{user.name.last}</td>
+                        <td>{user.gender}</td>
+                        <td>{user.email}</td>
+                        <td>{user.phone}</td>
+                        <td>{user.dob.age}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  );
                     
                 }))}
             </div> 
@@ -43,8 +76,3 @@ class UserDetail extends React.Component {
 
 }
 export default UserDetail;
-// First Name: {user.name.first}
-// Last Name: {user.name.last}
-// Gender: {user.gender}
-// Email Address: {user.email}
-// Phone Number: {user.phone}
