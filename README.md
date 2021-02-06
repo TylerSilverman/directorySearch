@@ -1,6 +1,7 @@
-#Employee Directory
+Employee Directory
 
 ## Description
+![DIRECTORYSEARCH](https://user-images.githubusercontent.com/70153419/107127359-91241e80-6883-11eb-9688-62c0876c6a0b.png)
 
 ## User Story
 
