@@ -12,8 +12,8 @@ class UserDetail extends React.Component {
       email: "",
       phone: "",
       dob: ""
-    }
-  }
+    };
+  };
 
 
   componentDidMount() {
@@ -22,9 +22,9 @@ class UserDetail extends React.Component {
       console.log(data.data.results)
       this.setState({
         users: data.data.results
-      })
-    })
-  }
+      });
+    });
+  };
 
   render() {
     const users = this.state.users;
@@ -35,13 +35,13 @@ class UserDetail extends React.Component {
            <table class="table">
               <thead class="thread">
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col">Images:</th>
                   <th scope="col">First Name:</th>
-                  <th scope="col">Last Name</th>
-                  <th scope="col">Gender</th>
-                  <th scope="col">Email Address</th>
-                  <th scope="col">Phone Number</th>
-                  <th scope="col">Years Old</th>
+                  <th scope="col">Last Name:</th>
+                  <th scope="col">Gender:</th>
+                  <th scope="col">Email Address:</th>
+                  <th scope="col">Phone Number:</th>
+                  <th scope="col">Years Old:</th>
                 </tr>
               </thead>
             </table>
@@ -50,7 +50,7 @@ class UserDetail extends React.Component {
             <table class="table">
               <tbody>
                 <tr>
-                  <th scope="row">#</th>
+                <th scope="row">Images</th>
                   <td>{user.name.first}</td>
                   <td>{user.name.last}</td>
                   <td>{user.gender}</td>
@@ -67,6 +67,5 @@ class UserDetail extends React.Component {
       </div>
     )
   }
-
 }
 export default UserDetail;
