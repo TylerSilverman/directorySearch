@@ -6,6 +6,7 @@ class UserDetail extends React.Component {
     super(props);
     this.state = {
       users: null,
+      images:"",
       first: "",
       last: "",
       gender: "",
@@ -13,8 +14,13 @@ class UserDetail extends React.Component {
       phone: "",
       dob: ""
     };
+    this.handleClick = this.handleClick.bind(this);
   };
 
+  handleClick = () => {
+    console.log("handleClick function ")
+    // this.setState({skip: this.data.skip + 1})
+  }
 
   componentDidMount() {
     API.getUsers().then(data => {
@@ -36,7 +42,7 @@ class UserDetail extends React.Component {
               <thead class="thread">
                 <tr>
                   <th scope="col">Images:</th>
-                  <th scope="col">First Name:</th>
+                  <th scope="col" onClick={this.handleClick}>First Name:</th>
                   <th scope="col">Last Name:</th>
                   <th scope="col">Gender:</th>
                   <th scope="col">Email Address:</th>
@@ -50,7 +56,7 @@ class UserDetail extends React.Component {
             <table class="table">
               <tbody>
                 <tr>
-                <th scope="row">Images</th>
+                <td><img src={user.picture.medium}></img></td>
                   <td>{user.name.first}</td>
                   <td>{user.name.last}</td>
                   <td>{user.gender}</td>
